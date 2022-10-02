@@ -1,5 +1,7 @@
 /*
  * have to check substracting coins from the amount to see if we can get zero, if we can than that's our recursion 
+ 
+ * for the approach in tree/recursion, we used 1st level branches: root amount->1,2,3 etc; 2nd level branches: 1->1, 2, 3 etc, 2->1, 2, 3etc, 3->1, 2, 3 etc.
 */
 
 
