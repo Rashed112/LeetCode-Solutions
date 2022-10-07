@@ -31,3 +31,8 @@ public:
                                                 by using '*' before it, we can return the value*/
     }
 };
+
+
+/*link for understanding different types of solution: 
+https://leetcode.com/problems/maximum-subarray/discuss/1595195/C%2B%2BPython-7-Simple-Solutions-w-Explanation-or-Brute-Force-%2B-DP-%2B-Kadane-%2B-Divide-and-Conquer
+*/
