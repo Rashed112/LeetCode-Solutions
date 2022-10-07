@@ -19,8 +19,25 @@ public:
     }
 };
 
+/*Solution-2: using dp */
+/* here we'll store all the max sum in of subarray in the dp array. we'll go from first and decide whether (this index value) is larger or (this index value + previous index value)
+is larger..and then the max value of dp array will be the ans of the summation of max subarray*/
 
-/*Solution-2: using DP-tabulation*/
+typedef long long int ll;
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int n= nums.size();
+        if(n == 0) return 0;
+        ll dp[n+5];
+        dp[0] = nums[0];
+        for(int i = 1; i < size(nums); i++) 
+            dp[i] = max((ll)nums[i], (ll)nums[i] + dp[i-1]);        
+        return *max_element(dp, dp+n); /*using max_element we can find an iterator pointer of largest value of the array/vector, so by using '*' before it, we can return the value*/
+    }
+};
+
+/*Solution-3: using DP-tabulation*/
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
