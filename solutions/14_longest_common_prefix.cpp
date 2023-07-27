@@ -1,7 +1,6 @@
 //Solution-1: Brute Force Approach
 //Time: O(N^2)
 //Space: O(N)
-
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
@@ -25,7 +24,6 @@ public:
 //Solution-2: Optimal Approach
 //Time: O(N*logN)
 //Space: O(N)
-
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
