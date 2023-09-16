@@ -1,4 +1,41 @@
-//Solution-1: 
+//Solution-1:
+class Solution {
+public:
+    int findPeakElement(vector<int>& nums) {
+        int n=nums.size();
+        if(n==1){
+            return 0;
+        }
+        if(nums[0]>nums[1]){
+            return 0;
+        }
+        if(nums[n-1]>nums[n-2]){
+            return n-1;
+        }
+        //search in the remaining array
+        int l=1, r=n-2;
+        while(r-l>1){
+            int m= l+(r-l)/2;
+            if(nums[m]>nums[m-1] && nums[m]>nums[m+1]){
+                return m;
+            }
+            else if(nums[m-1]>nums[m]){
+                r = m-1;
+            }
+            else{
+                l = m;
+            }
+        }
+        if(nums[l]>nums[l-1] && nums[l]>nums[l+1]){
+            return l;
+        }
+        else{
+            return r;
+        }
+    }
+};
+
+//Solution-2: 
 class Solution {
 public:
     int findPeakElement(vector<int>& nums) {
@@ -30,7 +67,7 @@ public:
     }
 };
 
-//Solution-2: 
+//Solution-3: 
 class Solution {
 public:
     int findPeakElement(vector<int>& nums) {
