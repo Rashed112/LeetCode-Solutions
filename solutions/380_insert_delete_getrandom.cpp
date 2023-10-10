@@ -30,8 +30,7 @@ public:
         values[tempIdx] = values[values.size()-1];
         indices.erase(val);
         values.pop_back();
-        return true;
-        
+        return true;     
     }
     
     int getRandom() {
